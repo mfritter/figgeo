@@ -1,0 +1,20 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+
+public abstract class Figura {
+  protected int posicaoX, posicaoY;
+	protected Color cor;
+	public Figura()
+	{
+		cor = Color.BLACK;
+	}
+	
+	public void scan()
+	{
+		posicaoX = Console.scanInt("Posicao X:");
+		posicaoY = Console.scanInt("Posicao Y:");
+	}
+	
+	public abstract void draw(Graphics g);
+}
