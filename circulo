@@ -1,0 +1,22 @@
+import java.awt.Graphics;
+import java.awt.geom.Ellipse2D;
+
+
+public class Circulo extends Figura {
+  private int diametro;
+
+	@Override
+	public void scan() {
+		// TODO Auto-generated method stub
+		super.scan();
+		diametro = Console.scanInt("Diametro: ");
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		// TODO Auto-generated method stub
+		//super.draw(g);
+		g.drawOval(posicaoX, posicaoY,diametro, diametro);
+	}
+	
+}
