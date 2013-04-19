@@ -1,0 +1,29 @@
+  public static int scanInt(Object out)
+	{
+		System.out.print(out);
+		Scanner scanner = new Scanner (System.in);
+		return(scanner.nextInt());		
+	}
+
+	public static double scanDouble(Object out)
+	{
+		System.out.print(out);
+		Scanner scanner = new Scanner (System.in);
+		return(scanner.nextDouble());		
+	}
+
+	public static boolean scanBoolean(Object out)
+	{
+		System.out.print(out);
+		Scanner scanner = new Scanner (System.in);
+		return(scanner.nextBoolean());		
+	}
+	
+	public static char scanChar(Object out)
+	{
+		System.out.print(out);
+		Scanner scanner = new Scanner (System.in);
+		return(scanner.next().charAt(0));				
+	}
+	
+}
