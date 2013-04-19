@@ -1,0 +1,23 @@
+import java.awt.Graphics;
+
+
+public class Retangulo extends Figura{
+  private int altura, largura;
+
+	@Override
+	public void scan() {
+		// TODO Auto-generated method stub
+		super.scan();
+		largura = Console.scanInt("Largura: ");
+		altura = Console.scanInt("Altura: ");
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		// TODO Auto-generated method stub
+		//super.draw(g);
+		g.drawRect(posicaoX, posicaoY, largura, altura);
+	}
+	
+	
+}
