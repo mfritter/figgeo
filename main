@@ -1,0 +1,44 @@
+import javax.swing.JFrame;
+
+
+
+public class Main {
+  public static void main(String args[])
+	{
+		JFrame frame = new JFrame("Tela de desenho");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    TelaDesenho tela = new TelaDesenho(500,500);
+	    frame.add(tela);
+	    frame.setSize(500, 500);
+	    frame.setVisible(true);		
+	
+		int opcao = 0;
+		
+		do{
+			opcao = Console.scanInt("Digite a opcao:\n" +
+					"1- Criar Circulo\n" +
+					"2- Criar Retangulo\n" +
+					"3- Limpar Tela\n" );
+			
+			if(opcao==1)
+			{
+				Circulo c = new Circulo();
+				c.scan();
+				tela.addFigura(c);
+			}
+			else if(opcao==2)
+			{
+				Retangulo r = new Retangulo();
+				r.scan();
+				tela.addFigura(r);
+			}
+			else if(opcao==3)
+			{
+				tela.removeFiguras();
+			}
+	
+		}while(opcao>0 && opcao<4);
+		frame.dispose();
+	}
+	
+}
